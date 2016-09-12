@@ -36,8 +36,8 @@ pictureHeight = theImages[1].size[1]
 for x in range(0,pictureWidth):
     for y in range(0, pictureHeight):
         for myImage in theImages:
-            myRed, myGreen, myBlue = myImage.getpixel((x,y))
-
+            myRed, myGreen, myBlue = myImage.getpixel((x,y))[:3]
+            # [:3] for transparancy channel
             redPixelList.append(myRed)
             greenPixelList.append(myGreen)
             bluePixelList.append(myBlue)
